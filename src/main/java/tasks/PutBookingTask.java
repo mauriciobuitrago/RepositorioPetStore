@@ -26,7 +26,7 @@ public class PutBookingTask implements Task {
                                         "    \"lastname\" : \"Jeon Can\",\n" +
                                         "    \"totalprice\" : 200,\n" +
                                         "    \"depositpaid\" : true,\n" +
-                                        "    \"bookingdates\" : {\n" +
+                                        "    
                                         "        \"checkin\" : \"2019-01-01\",\n" +
                                         "        \"checkout\" : \"2020-01-01\"\n" +
                                         "    },\n" +

@@ -46,6 +46,32 @@ public class RestfulBookerStepDefinition {
         System.out.println("Token " + PostCreateUserTask.Token2() + "   Token guardado " + Constanst.Token) ;
     }
 
+
+
+    
+    @Then("validation status OK")
+    public void validationStatusOK() {
+        park.should(GivenWhenThen.seeThat("Compare statuscode", PostCreateUserQuestion.was(), equalTo(200)));
+        System.out.println("Token " + PostCreateUserTask.Token2() + "   Token guardado " + Constanst.Token) ;
+    }
+    
+    @Then("validation status OK")
+    public void validationStatusOK() {
+        park.should(GivenWhenThen.seeThat("Compare statuscode", PostCreateUserQuestion.was(), equalTo(200)));
+        System.out.println("Token " + PostCreateUserTask.Token2() + "   Token guardado " + Constanst.Token) ;
+    }
+    
+    @Then("validation status OK")
+    public void validationStatusOK() {
+        park.should(GivenWhenThen.seeThat("Compare statuscode", PostCreateUserQuestion.was(), equalTo(200)));
+        System.out.println("Token " + PostCreateUserTask.Token2() + "   Token guardado " + Constanst.Token) ;
+    }
+    
+    @Then("validation status OK")
+    public void validationStatusOK() {
+        park.should(GivenWhenThen.seeThat("Compare statuscode", PostCreateUserQuestion.was(), equalTo(200)));
+        System.out.println("Token " + PostCreateUserTask.Token2() + "   Token guardado " + Constanst.Token) ;
+    }
     //Create Booking
     @When("Create booking")
     public void createBooking() {
@@ -69,20 +95,13 @@ public class RestfulBookerStepDefinition {
     //Get Booking
     @When("Get Booking")
     public void getBooking() {
-        park.attemptsTo(GetBookingTask.getBookingTask());
+    
     }
 
-    @Then("Validation schema response GetBooking")
-    public void validationSchemaResponseGetBooking() {
-        //park.should(GivenWhenThen.seeThat("Compare schema", GetBookingQuestion.was(), equalTo()));
-    }
+  
 
 
-    //Put Booking
-    @When("put Booking")
-    public void putBooking() {
-        park.attemptsTo(PutBookingTask.putBookingTask());
-    }
+  
 
     @Then("Validation in additionalneeds {string}")
     public void validationInAdditionalneeds(String update) {

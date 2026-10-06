@@ -8,7 +8,8 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features/restfulbooker.feature",
         glue = "stepsdefinitions",
-        snippets = CucumberOptions.SnippetType.CAMELCASE)
+        snippets = CucumberOptions.SnippetType.CAMELCASE,
+        plugin = {"pretty", "/cucumber-reports.html"})
 
 public class RestFullBookerRunner {
 }

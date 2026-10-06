@@ -39,10 +39,6 @@ public class PostCreateBookingTask implements Task {
         return SerenityRest.lastResponse().jsonPath().getString("bookingid");
     }
 
-    public static ResponseBody<Response> Schema() {
-        return SerenityRest.lastResponse().getBody();
-    }
-
     public static PostCreateBookingTask postCreateBookingTask() {
         return instrumented(PostCreateBookingTask.class);
     }
