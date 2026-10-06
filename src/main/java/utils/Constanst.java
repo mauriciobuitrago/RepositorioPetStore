@@ -64,4 +64,6 @@ public class Constanst {
                                             "  ]\n" +
                                             "}";
 
+                                            String token = SerenityRest.lastResponse().jsonPath().getString("token");
+
 }

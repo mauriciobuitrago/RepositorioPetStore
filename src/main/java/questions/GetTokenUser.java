@@ -13,4 +13,13 @@ public class GetTokenUser implements Question {
     public static Question<String> was() {
         return new GetTokenUser();
     }
+    
+public class GetTokenUser implements Question {
+    @Override
+   
+
+    public static Question<String> was() {
+        return new GetTokenUser();
+    }
+}
 }
