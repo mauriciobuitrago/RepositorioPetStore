@@ -10,4 +10,6 @@ public class Constanst {
 
     public static final String SchemaJson = "";
 
+                                            String token = SerenityRest.lastResponse().jsonPath().getString("token");
+
 }

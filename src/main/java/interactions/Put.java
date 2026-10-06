@@ -12,9 +12,8 @@ public class Put extends RestInteraction {
     private final String resource;
 
     public Put(String resource) {
-        this.resource = resource;
+        this.resource ;
     }
-
     @Step("{0} executes a PUT on the resource #resource")
     @Override
     public <T extends Actor> void performAs(T actor) {
