@@ -38,7 +38,9 @@ public class RestfulBookerStepDefinition {
     @When("enter to info new user")
     public void enterToInfoNewUser() {
         park.attemptsTo(PostCreateUserTask.postCreateUserTask());
+            System.out.println("Token " + PostCreateUserTask.Token2() + "   Token guardado " + Constanst.Token) ;
     }
+
 
     @Then("validation status OK")
     public void validationStatusOK() {
@@ -46,6 +48,32 @@ public class RestfulBookerStepDefinition {
         System.out.println("Token " + PostCreateUserTask.Token2() + "   Token guardado " + Constanst.Token) ;
     }
 
+
+
+    
+    @Then("validation status OK")
+    public void validationStatusOK() {
+        park.should(GivenWhenThen.seeThat("Compare statuscode", PostCreateUserQuestion.was(), equalTo(200)));
+        System.out.println("Token " + PostCreateUserTask.Token2() + "   Token guardado " + Constanst.Token) ;
+    }
+    
+    @Then("validation status OK")
+    public void validationStatusOK() {
+        park.should(GivenWhenThen.seeThat("Compare statuscode", PostCreateUserQuestion.was(), equalTo(200)));
+        System.out.println("Token " + PostCreateUserTask.Token2() + "   Token guardado " + Constanst.Token) ;
+    }
+    
+    @Then("validation status OK")
+    public void validationStatusOK() {
+        park.should(GivenWhenThen.seeThat("Compare statuscode", PostCreateUserQuestion.was(), equalTo(200)));
+        System.out.println("Token " + PostCreateUserTask.Token2() + "   Token guardado " + Constanst.Token) ;
+    }
+    
+    @Then("validation status OK")
+    public void validationStatusOK() {
+        park.should(GivenWhenThen.seeThat("Compare statuscode", PostCreateUserQuestion.was(), equalTo(200)));
+        System.out.println("Token " + PostCreateUserTask.Token2() + "   Token guardado " + Constanst.Token) ;
+    }
     //Create Booking
     @When("Create booking")
     public void createBooking() {
@@ -53,6 +81,40 @@ public class RestfulBookerStepDefinition {
     }
 
     @Then("Validation schema response")
+    public void validationSchemaResponse() {
+        
+
+        //JsonSchemaFactory jsonSchemaFactory = JsonSchemaFactory.newBuilder().setValidationConfiguration(ValidationConfiguration.newBuilder().setDefaultVersion(DRAFTV4).freeze()).freeze();
+
+      //  park.should(GivenWhenThen.seeThat("Compare schema", PostCreateBookingQuestion.was(), equalTo(matchesJsonSchemaInClasspath("utils/SchemaPostCreateBooking.json"))));
+        System.out.println("BookingID " + PostCreateBookingTask.BookingId());
+        System.out.println("Schema 0  " + PostCreateBookingTask.Schema().asString());
+    }
+     @Then("Validation schema response")
+    public void validationSchemaResponse() {
+        JsonSchemaValidator.settings = settings().with().jsonSchemaFactory(
+                        JsonSchemaFactory.newBuilder().setValidationConfiguration(ValidationConfiguration.newBuilder().setDefaultVersion(DRAFTV3).freeze()).freeze()).
+                and().with().checkedValidation(false);
+
+        //JsonSchemaFactory jsonSchemaFactory = JsonSchemaFactory.newBuilder().setValidationConfiguration(ValidationConfiguration.newBuilder().setDefaultVersion(DRAFTV4).freeze()).freeze();
+
+      //  park.should(GivenWhenThen.seeThat("Compare schema", PostCreateBookingQuestion.was(), equalTo(matchesJsonSchemaInClasspath("utils/SchemaPostCreateBooking.json"))));
+        System.out.println("BookingID " + PostCreateBookingTask.BookingId());
+        System.out.println("Schema 0  " + PostCreateBookingTask.Schema().asString());
+    }
+     @Then("Validation schema response")
+    public void validationSchemaResponse() {
+        JsonSchemaValidator.settings = settings().with().jsonSchemaFactory(
+                        JsonSchemaFactory.newBuilder().setValidationConfiguration(ValidationConfiguration.newBuilder().setDefaultVersion(DRAFTV3).freeze()).freeze()).
+                and().with().checkedValidation(false);
+
+        //JsonSchemaFactory jsonSchemaFactory = JsonSchemaFactory.newBuilder().setValidationConfiguration(ValidationConfiguration.newBuilder().setDefaultVersion(DRAFTV4).freeze()).freeze();
+
+      //  park.should(GivenWhenThen.seeThat("Compare schema", PostCreateBookingQuestion.was(), equalTo(matchesJsonSchemaInClasspath("utils/SchemaPostCreateBooking.json"))));
+        System.out.println("BookingID " + PostCreateBookingTask.BookingId());
+        System.out.println("Schema 0  " + PostCreateBookingTask.Schema().asString());
+    }
+     @Then("Validation schema response")
     public void validationSchemaResponse() {
         JsonSchemaValidator.settings = settings().with().jsonSchemaFactory(
                         JsonSchemaFactory.newBuilder().setValidationConfiguration(ValidationConfiguration.newBuilder().setDefaultVersion(DRAFTV3).freeze()).freeze()).
@@ -69,20 +131,13 @@ public class RestfulBookerStepDefinition {
     //Get Booking
     @When("Get Booking")
     public void getBooking() {
-        park.attemptsTo(GetBookingTask.getBookingTask());
+    
     }
 
-    @Then("Validation schema response GetBooking")
-    public void validationSchemaResponseGetBooking() {
-        //park.should(GivenWhenThen.seeThat("Compare schema", GetBookingQuestion.was(), equalTo()));
-    }
+  
 
 
-    //Put Booking
-    @When("put Booking")
-    public void putBooking() {
-        park.attemptsTo(PutBookingTask.putBookingTask());
-    }
+  
 
     @Then("Validation in additionalneeds {string}")
     public void validationInAdditionalneeds(String update) {

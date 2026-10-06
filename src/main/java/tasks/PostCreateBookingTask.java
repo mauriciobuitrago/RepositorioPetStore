@@ -35,12 +35,26 @@ public class PostCreateBookingTask implements Task {
         );
     }
 
+           actor.attemptsTo(
+                Post.to("/booking")
+                        .with(requestSpecification -> requestSpecification
+                                .contentType(ContentType.JSON)
+                                .auth()
+                                .oauth2(Constanst.Token)
+                                .body("{\n" +
+                                        "    \"firstname\" : \"Park\",\n" +
+                                        "    \"lastname\" : \"Jeon\",\n" +
+                                        "    \"totalprice\" : 200,\n" +
+                                        "    \"depositpaid\" : true,\n" +
+                                        "    \"bookingdates\" : {\n" +
+                                        "        \"checkin\" : \"2019-01-01\",\n" +
+                                        "        \"checkout\" : \"2020-01-01\"\n" +
+                                        "    },\n" +
+                                        "    \"additionalneeds\" : \"Breakfast\"\n" +
+                   
+
     public static String BookingId() {
         return SerenityRest.lastResponse().jsonPath().getString("bookingid");
-    }
-
-    public static ResponseBody<Response> Schema() {
-        return SerenityRest.lastResponse().getBody();
     }
 
     public static PostCreateBookingTask postCreateBookingTask() {

@@ -9,7 +9,7 @@ public class GetBookingQuestion implements Question {
 
     @Override
     public Object answeredBy(Actor actor) {
-        return SerenityRest.getDefaultBasePath();
+       
     }
 
     public static Question<String> was() {

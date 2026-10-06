@@ -11,12 +11,8 @@ import static net.serenitybdd.screenplay.Tasks.instrumented;
 public class GetBookingTask implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
-        actor.attemptsTo(
-                Get.resource("/booking" + "/" + PostCreateBookingTask.BookingId())
-                        .with(requestSpecification -> requestSpecification
-                                .contentType(ContentType.JSON)
-                                .auth()
-                                .oauth2(Constanst.Token))
+    
+    
         );
     }
 

@@ -17,8 +17,7 @@ public class Post extends RestInteraction {
 
     @Step("{0} executes a POST on the resource #resource")
     @Override
-    public <T extends Actor> void performAs(T actor) {
-        rest().post(as(actor).resolve(resource)).then().log().all();
+  
     }
 
     public static Post to(String resource) {

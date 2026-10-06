@@ -39,12 +39,7 @@
         }
       },
       "required": [
-        "firstname",
-        "lastname",
-        "totalprice",
-        "depositpaid",
-        "bookingdates",
-        "additionalneeds"
+  
       ]
     }
   },

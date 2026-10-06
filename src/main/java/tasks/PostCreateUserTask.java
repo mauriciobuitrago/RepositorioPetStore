@@ -17,8 +17,7 @@ public class PostCreateUserTask implements Task {
                         .with(requestSpecification -> requestSpecification
                                 .contentType(ContentType.JSON)
                                 .body("{\n" +
-                                        "    \"username\" : \"admin\",\n" +
-                                        "    \"password\" : \"password123\"\n" +
+                                 
                                         "}"))
         );
     }
