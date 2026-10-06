@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="restful booker" tests="4" skipped="0" failures="0" errors="0" timestamp="2022-03-22T19:41:24" hostname="QV-2655" time="11.42">
+  <properties/>
+  <testcase name="Create user" classname="restful booker" time="8.674"/>
+  <testcase name="Create booking" classname="restful booker" time="1.452"/>
+  <testcase name="Get Booking" classname="restful booker" time="0.636"/>
+  <testcase name="Put Booking" classname="restful booker" time="0.657"/>
+  <system-out><![CDATA[HTTP/1.1 200 OK
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 27
+Etag: W/"1b-Kx098bzULQeIdoHftWCln1iO1qs"
+Date: Tue, 22 Mar 2022 19:41:30 GMT
+Via: 1.1 vegur
+
+{
+    "token": "7b2aac33f6bbb20"
+}
+Token 7b2aac33f6bbb20   Token guardado 7b2aac33f6bbb20
+HTTP/1.1 200 OK
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 195
+Etag: W/"c3-yi11Zx8lGeu4jhF/7gmUerEgyuU"
+Date: Tue, 22 Mar 2022 19:41:32 GMT
+Via: 1.1 vegur
+
+{
+    "bookingid": 45,
+    "booking": {
+        "firstname": "Park",
+        "lastname": "Jeon",
+        "totalprice": 200,
+        "depositpaid": true,
+        "bookingdates": {
+            "checkin": "2019-01-01",
+            "checkout": "2020-01-01"
+        },
+        "additionalneeds": "Breakfast"
+    }
+}
+BookingID 45
+Schema 0  {"bookingid":45,"booking":{"firstname":"Park","lastname":"Jeon","totalprice":200,"depositpaid":true,"bookingdates":{"checkin":"2019-01-01","checkout":"2020-01-01"},"additionalneeds":"Breakfast"}}
+HTTP/1.1 200 OK
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 168
+Etag: W/"a8-6a2/6pQxzHM/n7ujZhs5hMYdIOQ"
+Date: Tue, 22 Mar 2022 19:41:33 GMT
+Via: 1.1 vegur
+
+{
+    "firstname": "Park",
+    "lastname": "Jeon",
+    "totalprice": 200,
+    "depositpaid": true,
+    "bookingdates": {
+        "checkin": "2019-01-01",
+        "checkout": "2020-01-01"
+    },
+    "additionalneeds": "Breakfast"
+}
+HTTP/1.1 403 Forbidden
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Content-Type: text/plain; charset=utf-8
+Content-Length: 9
+Etag: W/"9-PatfYBLj4Um1qTm5zrukoLhNyPU"
+Date: Tue, 22 Mar 2022 19:41:34 GMT
+Via: 1.1 vegur
+
+Forbidden
+]]></system-out>
+  <system-err><![CDATA[[Test worker] INFO io.cucumber.core.plugin.SerenityReporter - Running feature from file:///C:/Users/QV-2655/Documents/Qvsion/Semillero_de_Automatización/PruebasWeb/PetStore/src/test/resources/features/restfulbooker.feature
+[Test worker] WARN io.cucumber.core.plugin.SerenityReporter - Feature from file:///C:/Users/QV-2655/Documents/Qvsion/Semillero_de_Automatización/PruebasWeb/PetStore/src/test/resources/features/restfulbooker.feature is not under the 'features' directory. Requirements report will not be correctly generated!
+[Test worker] INFO  - 
+ _____ _____ ____ _____   ____ _____  _    ____ _____ _____ ____  
+|_   _| ____/ ___|_   _| / ___|_   _|/ \  |  _ \_   _| ____|  _ \ 
+  | | |  _| \___ \ | |   \___ \ | | / _ \ | |_) || | |  _| | | | |
+  | | | |___ ___) || |    ___) || |/ ___ \|  _ < | | | |___| |_| |
+  |_| |_____|____/ |_|   |____/ |_/_/   \_\_| \_\|_| |_____|____/ 
+
+Create user(restful-booker;create-user)
+-------------------------------------------------------------------
+[Test worker] INFO  - 
+        __    _____ _____ ____ _____   ____   _    ____  ____  _____ ____  
+  _     \ \  |_   _| ____/ ___|_   _| |  _ \ / \  / ___|/ ___|| ____|  _ \ 
+ (_)_____| |   | | |  _| \___ \ | |   | |_) / _ \ \___ \\___ \|  _| | | | |
+  _|_____| |   | | | |___ ___) || |   |  __/ ___ \ ___) |___) | |___| |_| |
+ (_)     | |   |_| |_____|____/ |_|   |_| /_/   \_\____/|____/|_____|____/ 
+        /_/                                                                
+
+Create user
+----------------------------------------------------------------------------
+[Test worker] INFO io.cucumber.core.plugin.SerenityReporter - Running feature from file:///C:/Users/QV-2655/Documents/Qvsion/Semillero_de_Automatización/PruebasWeb/PetStore/src/test/resources/features/restfulbooker.feature
+[Test worker] WARN io.cucumber.core.plugin.SerenityReporter - Feature from file:///C:/Users/QV-2655/Documents/Qvsion/Semillero_de_Automatización/PruebasWeb/PetStore/src/test/resources/features/restfulbooker.feature is not under the 'features' directory. Requirements report will not be correctly generated!
+[Test worker] INFO  - 
+ _____ _____ ____ _____   ____ _____  _    ____ _____ _____ ____  
+|_   _| ____/ ___|_   _| / ___|_   _|/ \  |  _ \_   _| ____|  _ \ 
+  | | |  _| \___ \ | |   \___ \ | | / _ \ | |_) || | |  _| | | | |
+  | | | |___ ___) || |    ___) || |/ ___ \|  _ < | | | |___| |_| |
+  |_| |_____|____/ |_|   |____/ |_/_/   \_\_| \_\|_| |_____|____/ 
+
+Create booking(restful-booker;create-booking)
+-------------------------------------------------------------------
+[Test worker] INFO  - 
+        __    _____ _____ ____ _____   ____   _    ____  ____  _____ ____  
+  _     \ \  |_   _| ____/ ___|_   _| |  _ \ / \  / ___|/ ___|| ____|  _ \ 
+ (_)_____| |   | | |  _| \___ \ | |   | |_) / _ \ \___ \\___ \|  _| | | | |
+  _|_____| |   | | | |___ ___) || |   |  __/ ___ \ ___) |___) | |___| |_| |
+ (_)     | |   |_| |_____|____/ |_|   |_| /_/   \_\____/|____/|_____|____/ 
+        /_/                                                                
+
+Create booking
+----------------------------------------------------------------------------
+[Test worker] INFO io.cucumber.core.plugin.SerenityReporter - Running feature from file:///C:/Users/QV-2655/Documents/Qvsion/Semillero_de_Automatización/PruebasWeb/PetStore/src/test/resources/features/restfulbooker.feature
+[Test worker] WARN io.cucumber.core.plugin.SerenityReporter - Feature from file:///C:/Users/QV-2655/Documents/Qvsion/Semillero_de_Automatización/PruebasWeb/PetStore/src/test/resources/features/restfulbooker.feature is not under the 'features' directory. Requirements report will not be correctly generated!
+[Test worker] INFO  - 
+ _____ _____ ____ _____   ____ _____  _    ____ _____ _____ ____  
+|_   _| ____/ ___|_   _| / ___|_   _|/ \  |  _ \_   _| ____|  _ \ 
+  | | |  _| \___ \ | |   \___ \ | | / _ \ | |_) || | |  _| | | | |
+  | | | |___ ___) || |    ___) || |/ ___ \|  _ < | | | |___| |_| |
+  |_| |_____|____/ |_|   |____/ |_/_/   \_\_| \_\|_| |_____|____/ 
+
+Get Booking(restful-booker;get-booking)
+-------------------------------------------------------------------
+[Test worker] INFO  - 
+        __    _____ _____ ____ _____   ____   _    ____  ____  _____ ____  
+  _     \ \  |_   _| ____/ ___|_   _| |  _ \ / \  / ___|/ ___|| ____|  _ \ 
+ (_)_____| |   | | |  _| \___ \ | |   | |_) / _ \ \___ \\___ \|  _| | | | |
+  _|_____| |   | | | |___ ___) || |   |  __/ ___ \ ___) |___) | |___| |_| |
+ (_)     | |   |_| |_____|____/ |_|   |_| /_/   \_\____/|____/|_____|____/ 
+        /_/                                                                
+
+Get Booking
+----------------------------------------------------------------------------
+[Test worker] INFO io.cucumber.core.plugin.SerenityReporter - Running feature from file:///C:/Users/QV-2655/Documents/Qvsion/Semillero_de_Automatización/PruebasWeb/PetStore/src/test/resources/features/restfulbooker.feature
+[Test worker] WARN io.cucumber.core.plugin.SerenityReporter - Feature from file:///C:/Users/QV-2655/Documents/Qvsion/Semillero_de_Automatización/PruebasWeb/PetStore/src/test/resources/features/restfulbooker.feature is not under the 'features' directory. Requirements report will not be correctly generated!
+[Test worker] INFO  - 
+ _____ _____ ____ _____   ____ _____  _    ____ _____ _____ ____  
+|_   _| ____/ ___|_   _| / ___|_   _|/ \  |  _ \_   _| ____|  _ \ 
+  | | |  _| \___ \ | |   \___ \ | | / _ \ | |_) || | |  _| | | | |
+  | | | |___ ___) || |    ___) || |/ ___ \|  _ < | | | |___| |_| |
+  |_| |_____|____/ |_|   |____/ |_/_/   \_\_| \_\|_| |_____|____/ 
+
+Put Booking(restful-booker;put-booking)
+-------------------------------------------------------------------
+[Test worker] INFO  - 
+        __    _____ _____ ____ _____   ____   _    ____  ____  _____ ____  
+  _     \ \  |_   _| ____/ ___|_   _| |  _ \ / \  / ___|/ ___|| ____|  _ \ 
+ (_)_____| |   | | |  _| \___ \ | |   | |_) / _ \ \___ \\___ \|  _| | | | |
+  _|_____| |   | | | |___ ___) || |   |  __/ ___ \ ___) |___) | |___| |_| |
+ (_)     | |   |_| |_____|____/ |_|   |_| /_/   \_\____/|____/|_____|____/ 
+        /_/                                                                
+
+Put Booking
+----------------------------------------------------------------------------
+]]></system-err>
+</testsuite>
